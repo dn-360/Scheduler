@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/template.css" rel="stylesheet" />
+
+    <style>
+        body {
+        background:#1B1B1E;
+        width: 1440px;
+        height: 1024px;
+        overflow-x: hidden;
+        }
+    #map {
+            position: absolute;
+            width: 1500px;
+            height: 790px;
+            left: 200px;
+            top: 387px;
+            border-radius: 1%;
+
+          }
+          h2{
+            position: absolute;
+            width: 1140px;
+            height: 166px;
+            left: 164px;
+            top: 100px;
+
+            font-family: Montserrat;
+            font-style: bold;
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 78px;
+            text-align: right;
+
+            color: #FFFFFF;
+          }
+
+          h3{
+            position: absolute;
+        left: 40px;
+        
+        top: -25px;
+        
+
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 34px;
+            line-height: 78px;
+            text-align: center;
+
+            color: #000000;
+          }
+
+         input[type=text]{
+
+            position: absolute;
+            left: 11%;
+            width: 65%;
+            top: 32%;
+            bottom: 60%;
+
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 28px;
+          }
+
+          input[type=text]:focus{
+            border-color:rgb(6, 43, 206);
+            box-shadow: 0px 0px 20px 0 rgb(7, 4, 173);
+          }
+
+          input {
+            font-size: 250%;
+            width: 1500px;
+          }
+          #verifybox {
+              position: absolute;
+            height: 10%;
+            width: 12%;
+
+            left: 77.5%;
+            top: 280px;
+            background: #F5D547;
+            border-radius: 10px;
+            }
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #F61067;
+        color: rgb(255, 255, 255);
+      }
+
+      .topnav a.active {
+        background-color: #F61067;
+        color: rgb(253, 253, 253);
+      }
+
+      .topnav-right {
+        float: right;
+      }
+      #redCircle {
+        position: absolute;
+        width: 455.28px;
+        height: 429px;
+        left: 800px;
+        top: 300px;
+        border-radius: 50%;
+        background: #F61067;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <div class="topnav-right">
+        <a class="active" href="my_schedule.html">My Schedule</a>
+        <a href="search.html">Search</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Home</a>
+      </div>
+    </div>
+    <div class="elipse"></div>
+    <div class="circle"></div>
+    <div class="poly"></div>
+
+    <h2>Where do you want to study?</h2>
+   
+    <input type="text" placeholder="Enter Location Here">
+    <!-- <div id="questiontextbox"></div> -->
+
+    <a href="index.html"> <div id="verifybox"><h3>Continue</h3></div></a>
+          </div>
+
+
+
+    <div class="container"></div>
+    <div id="map"></div>
+
+
+
+    <script>
+        function initMap() {
+
+          const ucMerced = new google.maps.LatLng('37.3661', '-120.4224');
+
+              infowindow = new google.maps.InfoWindow();
+              map = new google.maps.Map(document.getElementById("map"), {center: ucMerced,zoom: 16,});
+           
+          }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVqS0hx3fGsSYJFXsmJdco9CIMFECyseo&callback=initMap"></script>
+
+</body>
+
+</html>
