@@ -1,200 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  
+
+<head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+    <link href="./css/template.css" rel="stylesheet" />
 
     <style>
-      body {
-    background:#1B1B1E
-;
-    width: 1440px;
-    height: 1024px;
-    
-      }
-      h2{
-        position: absolute;
-        width: 1140px;
-        height: 166px;
-        left: 164px;
-        top: 100px;
+        body {
+        background:#1B1B1E;
+        width: 1440px;
+        height: 1024px;
+        }
+    #map {
+            position: absolute;
+            width: 1500px;
+            height: 548px;
+            left: 200px;
+            top: 387px;
+            border-radius: 1%;
 
-        font-family: Montserrat;
-        font-style: bold;
-        font-weight: 900;
-        font-size: 64px;
-        line-height: 78px;
-        text-align: right;
+          }
+          h2{
+            position: absolute;
+            width: 1140px;
+            height: 166px;
+            left: 164px;
+            top: 100px;
 
-        color: #FFFFFF;
-      }
+            font-family: Montserrat;
+            font-style: bold;
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 78px;
+            text-align: right;
 
+            color: #FFFFFF;
+          }
 
-      #questiontextbox{
-        position: absolute;
-        left: 10%;
-        right: 28%;
-        top: 32%;
-        bottom: 60%;
+         input[type=text]{
 
-        background: #FFFFFF;
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 28px;
-      }
+            position: absolute;
+            left: 10%;
+            right: 28%;
+            top: 32%;
+            bottom: 60%;
 
-     input[type=text]{
-        
-        position: absolute;
-        left: 10%;
-        right: 28%;
-        top: 32%;
-        bottom: 60%;
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 28px;
+          }
 
-        background: #FFFFFF;
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 28px;
-      }
+          input[type=text]:focus{
+            border-color:rgb(190, 5, 61);
+            box-shadow: 0 0 20px 0 rgb(190, 5, 61);
+          }
 
-      input[type=text]:focus{
-        border-color:rgb(190, 5, 61);
-        box-shadow: 0 0 20px 0 rgb(190, 5, 61);
-      }
-      
-      input {
-        font-size: 200%;
-        width: 1190px;
-      }
-
-      #verifybox{
-        position: absolute;
-        left: 1400px;
-        right: 206px;
-        top: 290px;
-        bottom: 540px;
-
-        background: #F5D547;
-        border-radius: 10px;
-
-      }
-
-      #Verify{
-        position: absolute;
-        left: 0%;
-        
-        top: -250px;
-        bottom: 0%;
-
-        font-family: Lusitana;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 47px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #1B1B1E;
-      }
-
-      #elipse{
-      position: absolute;
-      width: 455.28px;
-      height: 429px;
-      left: 950px;
-      top: 779px;
-
-      border-radius: 50%;
-
-      background: #F5D547;
-      }
-
-      #circle{
-        position: absolute;
-        width: 455.28px;
-        height: 429px;
-        left: 1609px;
-        top: 100px;
-        border-radius: 50%;
-        background: #3772FF;
-      }
-
-      #poly{
-        position: absolute;
-        width: 388.32px;
-        height: 397.32px;
-        left: -200px;
-        top: 325.43px;
-
-        background: #F61067;
-        border-radius: 11px;
-        transform: rotate(-25deg);
-    }
-
-    #container {
-        height: 25vh;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #map {
-        position: absolute;
-        width: 1500px;
-        height: 548px;
-        left: 200px;
-        top: 387px;
-        border-radius: 1%;
-        
-      }
-
+          input {
+            font-size: 200%;
+            width: 1190px;
+          }
     </style>
-   
-  </head>
-  
-  <body>
 
-    <div id="elipse"></div>
-    <div id="circle"></div>
-    <div id="poly"></div>
+</head>
 
+<body>
+
+    <div class="elipse"></div>
+    <div class="circle"></div>
+    <div class="poly"></div>
 
     <h2>Where do you want to study?</h2>
-    <div id="Verify">Verify</div>
+    <div class="Verify">Verify</div>
     <input type="text" placeholder="Enter Location Here">
-   <!-- <div id="questiontextbox"></div> -->
-    <div id="verifybox"></div>
+    <!-- <div id="questiontextbox"></div> -->
+    <div class="verifybox"></div>
 
-    <div id="container"></div>
+    <div class="container"></div>
     <div id="map"></div>
 
     <div class="topnav">
-      <div class="topnav-right">
-        <a class="active" href="my_schedule.html">My Schedule</a>
-        <a href="search.html">Search</a>
-        <a href="login.html">Login</a>
-        <a href="profile.html">Profile</a>
-      </div>
+        <div class="topnav-right">
+            <a class="active" href="my_schedule.html">My Schedule</a>
+            <a href="search.html">Search</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">Profile</a>
+        </div>
     </div>
 
     <script>
-      function initMap() {
-        let mapOptions = {
-          center: new google.maps.LatLng('41.881832', '-87.623177'),
-          zoom: 12,
-        };
-        let map = new google.maps.Map(document.getElementById('map'),mapOptions);
-      }
+        function initMap() {
+            let mapOptions = {
+              center: new google.maps.LatLng('41.881832', '-87.623177'),
+              zoom: 12,
+            };
+            let map = new google.maps.Map(document.getElementById('map'),mapOptions);
+          }
     </script>
 
     <script src="./app.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVqS0hx3fGsSYJFXsmJdco9CIMFECyseo&callback=initMap"></script>
 
-  </body>
+</body>
+
 </html>
