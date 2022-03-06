@@ -2,10 +2,15 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href=
+    'https://fonts.googleapis.com/css?family=Montserrat' 
+              rel='stylesheet' />
+
     <style>
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
+        background-color: #1B1B1E;
       }
 
       .topnav {
@@ -35,8 +40,107 @@
       .topnav-right {
         float: right;
       }
+
+      .header {
+        padding: 10px;
+        color: #FFFFFF;
+        text-align: right;
+        
+        font-family: Montserrat;
+        font-style: bold;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 70px;
+      }
+
+      .boxed {
+        width: 95%;
+        height: 95%;
+        position: relative;
+        float: left;
+        border-radius: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 10%;
+        margin-right: 10px;
+        background: #F5D547;
+      }
+
+      .random-ellipse{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        left: -156px;
+        top: 141.79px;
+        border-radius: 50%;
+
+        background: #090C9B;
+      }
+
+      .boxunder{
+        width: 70%;
+        position: relative;
+        float: right;
+        padding-right: 5%;
+        margin-right: 10px;
+        padding-bottom: 10px;
+
+        background: #F61067;
+        border-radius: 50px;
+      }
+
+
+      .card {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+      }
+
+      /* Add some padding inside the card container */
+      .container {
+        padding: 2px 16px;
+      }
+
+      .search-container {
+        background-color: #ffffff;
+        width: 75%;
+        position: relative;
+        float: right;
+        border-radius: 50px;
+        margin-bottom: 5px;
+        margin-right: 10px;
+      }
+
+      input[type=text] {
+        padding: 6px;
+        width: 80%;
+        margin-top: 4px;
+        margin-left: 15px;
+        font-size: 17px;
+        border: none;
+      }
+
+      .flex-parent-element {
+        display: flex;
+        width: 100%;
+      }
+
+      .flex-child-element-image {
+        flex: 1;
+        margin: 5px;
+        position:relative; 
+        left: 5px; 
+        top: 5px;
+      }
+
+      .flex-child-element-text {
+        flex: 4;
+        margin: 5px;
+      }
+
     </style>
   </head>
+
   <body>
     <div class="topnav">
       <div class="topnav-right">
@@ -46,5 +150,71 @@
         <a href="profile.html">Profile</a>
       </div>
     </div>
+
+    <div class="random-ellipse"></div>
+
+    <div class="header">
+      <h1>Online students like you:</h1>
+    </div>
+
+    <div class="search-container">
+      <form>
+        <input type="text" placeholder="Search.." name="search">
+      </form>
+    </div>
+
+    <div class="boxunder">
+      <div class="boxed">
+
+        <p>Showing results for: Thermodynamics</p>
+
+        <a href="message.html">
+          <div class="card">
+            <div class="flex-parent-element">
+              <div class="flex-child-element-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Boiled_eggs_in_saucepan_by_Sarah_McCulloch.jpg/250px-Boiled_eggs_in_saucepan_by_Sarah_McCulloch.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="flex-child-element-text"><div class="container">
+                <h4><b>Boiled Egg</b></h4>
+                <p>Looking for: Thermodynamics</p>
+                <p>Times Available: M&Th, 10AM-3PM</p>
+              </div></div>
+            </div>
+          </div>
+        </a>
+
+        <a href="message.html">
+          <div class="card">
+            <div class="flex-parent-element">
+              <div class="flex-child-element-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/FoodOmelete.jpg/250px-FoodOmelete.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="flex-child-element-text"><div class="container">
+                <h4><b>Omelette</b></h4>
+                <p>Looking for: Thermodynamics</p>
+                <p>Times Available: M&Th, 10AM-3PM</p>
+              </div></div>
+            </div>
+          </div>
+        </a>
+
+        <a href="message.html">
+          <div class="card">
+            <div class="flex-parent-element">
+              <div class="flex-child-element-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Boiled_eggs_in_saucepan_by_Sarah_McCulloch.jpg/250px-Boiled_eggs_in_saucepan_by_Sarah_McCulloch.jpg" alt="Avatar" style="width:100%">
+              </div>
+              <div class="flex-child-element-text"><div class="container">
+                <h4><b>Florentine</b></h4>
+                <p>Looking for: Thermodynamics</p>
+                <p>Times Available: M&Th, 10AM-3PM</p>
+              </div></div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+    
   </body>
 </html>
