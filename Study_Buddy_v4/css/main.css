@@ -151,6 +151,21 @@ body {
   opacity: 1;
   text-align: right;
 }
+.question_Text{
+  position: absolute;
+width: 673px;
+height: 44px;
+left: 590px;
+top: 427px;
+
+font-family: Lusitana;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 62px;
+
+color: #FFFFFF;
+}
 .button{
   background-color: yellow;
   border: none;
